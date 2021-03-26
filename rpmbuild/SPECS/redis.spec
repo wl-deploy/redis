@@ -1,6 +1,6 @@
 %define realname redis
 
-%define orgnize neu
+%define orgnize wl
 
 %define realver 5.0.5
 
