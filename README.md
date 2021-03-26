@@ -1,4 +1,4 @@
-[![LICENSE](https://github.com/wl-deploy/redis "LICENSE")](./LICENSE "LICENSE")  [![software](https://img.shields.io/badge/wl--deploy-redis-yellowgreen "software")]( https://redis.io/ "software") [![release](https://img.shields.io/badge/release-latest-orange "release")](https://github.com/weiliang-ms/nginx-rpm/releases/tag/latest "release")
+[![LICENSE](https://img.shields.io/badge/license-MIT-green "LICENSE")](./LICENSE "LICENSE")  [![software](https://img.shields.io/badge/wl--deploy-redis-yellowgreen "software")]( https://redis.io/ "software") [![release](https://img.shields.io/badge/release-latest-orange "release")](https://github.com/weiliang-ms/nginx-rpm/releases/tag/latest "release")
 
 # redis部署文档
 
@@ -204,7 +204,7 @@ redis-cli -c -p 26379 -a redis cluster nodes
 	redis-cli -p 26380 -a redis shutdown
 
     
-客户端连接（建议neusoft用户：neusoft/1234%^&*）
+客户端连接（建议wl用户：wl/123456）
 
 	redis-cli -p 26379 -c -a redis
 	redis-cli -p 26379 -c -a redis
@@ -323,7 +323,7 @@ k8s主节点创建NFS
 	      serviceAccount: redis-nfs-provisioner
 	      containers:
 	      - name: redis-nfs-provisioner
-	        image: harbor.neusoft.com/external_storage/nfs-client-provisioner:latest
+	        image: harbor.wl.com/external_storage/nfs-client-provisioner:latest
 	        imagePullPolicy: IfNotPresent
 	        volumeMounts:
 	        - name: nfs-client-root
@@ -426,7 +426,7 @@ k8s主节点创建NFS StorageClass
 	      serviceAccountName: nfs-client-provisioner
 	      initContainers:
 	        - name: peer-finder-plugin-install
-	          image: harbor.neusoft.com/nacos/nacos-peer-finder-plugin:latest
+	          image: harbor.wl.com/nacos/nacos-peer-finder-plugin:latest
 	          imagePullPolicy: Always
 	          volumeMounts:
 	            - mountPath: "/home/nacos/plugins/peer-finder"
@@ -434,7 +434,7 @@ k8s主节点创建NFS StorageClass
 	      containers:
 	        - name: nacos
 	          imagePullPolicy: Always
-	          image: harbor.neusoft.com/nacos/nacos-server:latest
+	          image: harbor.wl.com/nacos/nacos-server:latest
 	          resources:
 	            requests:
 	              memory: "2Gi"
