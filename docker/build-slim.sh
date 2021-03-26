@@ -1,0 +1,1 @@
+docker-slim build --from-dockerfile Dockerfile --include-bin=/usr/local/bin/redis-cli --tag redis:slim .
